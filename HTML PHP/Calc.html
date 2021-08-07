@@ -1,0 +1,52 @@
+<html>
+<head><title>KALKULATOR BESARAN</title></head>
+<body>
+<form>
+<table align="center" bgcolor="blue" width="400" height="300"><tr><td><pre>
+<h1 align="center"> Kalkulator Besaran</h1>
+Input Massa Jenis = <input type="number" name="massajenis" required>
+Input Massa Benda = <input type="number" name="massa" required>
+Input Volume = <input type="number" name="volume" required>
+<input type="submit" name="proses" value="HITUNG">
+<br>
+<input type="reset" name="batal" value="HAPUS">
+</pre></td></tr></table>
+</form>
+</body>
+</html>
+
+<?php 
+if(isset($_GET['proses'] )) 
+{
+$p=$_GET['massajenis'];
+$m=$_GET['massa'];
+$v=$_GET['volume'];
+
+	echo"<html><head><title>KALKULATOR BESARAN</head></title>
+	<body bgcolor='pink'>
+	<br>
+	<br>
+	<table align='center' width='600' height='500' bgcolor='DarkRed'>
+	<tr>
+	<td>
+	<pre>
+	<font size='3px' color='yellow'>
+	<h1 align='center'>HASIL PENGHITUNGAN</h1>
+	<hr>
+	<font size='5' color='yellow'>
+
+	Massa jenis: $p
+	Massa: $m
+	volume: $v";
+
+<div class="kalkulatorbesaran">
+<h2 class="judul">Kalkulator Besaran</h2>
+<form method="post" action="kalkulatorbesaran.php">   
+<input type="text" name="angka1" class="angka1">
+<input type="text" name="angka2" class="angka2">
+<select class="opt" name="operasihitung">
+<option value="p">P</option>
+<option value="m">m</option>
+<option value="v">v</option>
+
+}?>

@@ -1,0 +1,48 @@
+<html>
+<head><title>My First HTML</title></head>
+
+<body>
+<form method = "GET" action="">
+	Massa Jenis : <input type="number" name="num1"><br>	
+	Massa Benda : <input type="number" name="num2"><br>
+	Volume		: <input type="number" name="num3"><br>	
+	<select name="satuan">
+		<option>None</option>
+		<option>p</option>
+		<option>m</option>
+		<option>v</option>
+	</select>
+	<br>
+	<button type="submit" name="submit" value="submit">Calculate</button>
+</form>
+
+<?php
+	$p = $_GET['num1'];
+	$m = $_GET['num2'];
+	$v = $_GET['num3'];
+	if ($_GET)
+	{
+		$rumus = $_GET['satuan'];
+	
+		switch($rumus){
+			break;
+			case "p":
+				echo $p + $m;
+			break;
+			case "m":
+				echo $p-$m;
+			break;
+			case "v":
+				echo $p/$m;
+			break;
+			default:
+				echo "ERROR!";
+				break;
+		}
+	}
+	}
+?>
+
+</body>
+</html>
+
